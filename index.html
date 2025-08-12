@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Triada Calendar — Coming Soon</title>
+  <meta name="description" content="Triada Calendar — a fast, distraction‑free 3‑month menu bar calendar for macOS." />
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --card: #151922;
+      --fg: #e9eef5;
+      --muted: #97a3b6;
+      --accent: #5ab1ff;
+      --border: #232838;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color: var(--fg); background: radial-gradient(1200px 800px at 80% -20%, #1b2233, var(--bg));
+      display: grid; place-items: center; padding: 24px;
+    }
+    .card {
+      width: 100%; max-width: 760px; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.0));
+      border: 1px solid var(--border); border-radius: 20px; padding: 28px; backdrop-filter: blur(6px);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+    }
+    .logo {
+      display: inline-flex; gap: 12px; align-items: center; margin-bottom: 8px;
+    }
+    .logo svg { width: 28px; height: 28px; fill: var(--accent); }
+    h1 { font-size: 28px; margin: 8px 0 12px; letter-spacing: 0.2px; }
+    p.lead { color: var(--muted); margin-top: 0; margin-bottom: 18px; }
+    .pill {
+      display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 999px;
+      border: 1px solid var(--border); background: #0f1320; color: var(--muted); font-size: 12px; margin-bottom: 16px;
+    }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+    .feature { border: 1px solid var(--border); border-radius: 14px; padding: 14px; background: #0e1220; }
+    .feature h3 { margin: 0 0 6px; font-size: 15px; }
+    .muted { color: var(--muted); }
+    .actions { display: flex; gap: 12px; margin-top: 18px; flex-wrap: wrap; }
+    a.btn { text-decoration: none; border: 1px solid var(--border); padding: 10px 14px; border-radius: 12px; color: var(--fg); background: #0f1424; }
+    a.btn.primary { background: linear-gradient(135deg, #3d8bff, #6cc8ff); color: #061018; border-color: transparent; font-weight: 600; }
+    footer { margin-top: 20px; font-size: 12px; color: var(--muted); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    code { background: #0f1424; border: 1px solid var(--border); padding: 2px 6px; border-radius: 8px; }
+    .tabs { display:flex; gap:8px; margin: 4px 0 16px; }
+    .tabs a { text-decoration:none; color: var(--muted); padding: 6px 10px; border-radius: 10px; border: 1px solid var(--border); background:#0f1320; }
+    .tabs a.active { color: var(--fg); border-color: #315dff55; box-shadow: inset 0 0 0 1px #5ab1ff55; }
+    .hidden { display:none; }
+  </style>
+</head>
+<body>
+  <main class="card" role="main">
+    <div class="logo" aria-label="Triada Calendar">
+      <!-- Minimal mark -->
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7zm2 0v2h12V7a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm0 4v6a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-6H6z"/></svg>
+      <strong>Triada Calendar</strong>
+    </div>
+
+    <div class="tabs" role="tablist">
+      <a href="#support" id="tab-support" class="active" role="tab" aria-controls="support" aria-selected="true">Support</a>
+      <a href="#marketing" id="tab-marketing" role="tab" aria-controls="marketing" aria-selected="false">Marketing</a>
+    </div>
+
+    <section id="support" role="tabpanel">
+      <span class="pill">Status: <strong>Coming Soon</strong></span>
+      <h1>Support for Triada Calendar</h1>
+      <p class="lead">Thanks for checking out Triada Calendar. This is a lightweight macOS menu bar app that shows <strong>three months at a glance</strong> with instant navigation. A full help center and FAQ are coming soon.</p>
+
+      <div class="grid">
+        <div class="feature">
+          <h3>Contact</h3>
+          <p class="muted">Email: <a href="mailto:jazzyalex@gmail.com">jazzyalex@gmail.com</a></p>
+        </div>
+        <div class="feature">
+          <h3>Quick Help</h3>
+          <p class="muted">Open the calendar from the menu bar icon. Navigate months with arrow keys. Works entirely offline.</p>
+        </div>
+        <div class="feature">
+          <h3>Roadmap</h3>
+          <p class="muted">Planned: Apple Calendar integration, multiple design themes, floating window mode.</p>
+        </div>
+      </div>
+
+      <div class="actions">
+        <a class="btn primary" href="#" aria-disabled="true">Download on the Mac App Store (soon)</a>
+        <a class="btn" href="#marketing" id="go-marketing">About Triada Calendar</a>
+      </div>
+    </section>
+
+    <section id="marketing" class="hidden" role="tabpanel">
+      <span class="pill">Triada Calendar</span>
+      <h1>Three months at a glance — right from your menu bar.</h1>
+      <p class="lead">Triada Calendar is a fast, distraction‑free calendar for macOS. View past, current, and next month together, with instant month/year navigation and automatic Light/Dark Mode.</p>
+
+      <div class="grid">
+        <div class="feature">
+          <h3>Why it’s different</h3>
+          <p class="muted">Most menu bar calendars show only one or two months. Triada shows <strong>three</strong> with a clean, native layout.</p>
+        </div>
+        <div class="feature">
+          <h3>Privacy‑first</h3>
+          <p class="muted">No accounts. No analytics. Works fully offline.</p>
+        </div>
+        <div class="feature">
+          <h3>Built for focus</h3>
+          <p class="muted">Opens instantly without switching apps — perfect for planning dates while you work.</p>
+        </div>
+      </div>
+
+      <div class="actions">
+        <a class="btn primary" href="#" aria-disabled="true">Download on the Mac App Store (soon)</a>
+        <a class="btn" href="#support" id="go-support">Get Support</a>
+      </div>
+    </section>
+
+    <footer>
+      <div>© 2025 Alexander Malakhov. All rights reserved.</div>
+      <div class="muted">Version 0.1 • contact: <a href="mailto:jazzyalex@gmail.com">jazzyalex@gmail.com</a></div>
+    </footer>
+  </main>
+
+  <script>
+    const tabSupport = document.getElementById('tab-support');
+    const tabMarketing = document.getElementById('tab-marketing');
+    const support = document.getElementById('support');
+    const marketing = document.getElementById('marketing');
+    const goSupport = document.getElementById('go-support');
+    const goMarketing = document.getElementById('go-marketing');
+
+    function show(id) {
+      if (id === '#marketing') {
+        support.classList.add('hidden');
+        marketing.classList.remove('hidden');
+        tabSupport.classList.remove('active');
+        tabMarketing.classList.add('active');
+      } else {
+        marketing.classList.add('hidden');
+        support.classList.remove('hidden');
+        tabMarketing.classList.remove('active');
+        tabSupport.classList.add('active');
+      }
+    }
+
+    tabSupport.addEventListener('click', e => { e.preventDefault(); show('#support'); });
+    tabMarketing.addEventListener('click', e => { e.preventDefault(); show('#marketing'); });
+    if (goSupport) goSupport.addEventListener('click', e => { e.preventDefault(); show('#support'); });
+    if (goMarketing) goMarketing.addEventListener('click', e => { e.preventDefault(); show('#marketing'); });
+
+    // Deep-link via hash
+    if (location.hash === '#marketing') show('#marketing');
+  </script>
+</body>
+</html>
